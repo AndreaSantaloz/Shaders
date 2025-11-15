@@ -122,9 +122,13 @@ const shaderMaterial = new THREE.ShaderMaterial({
   lights: false,
 });
 ```
-¡Claro\! Este es un **Fragment Shader** escrito en **GLSL** (OpenGL Shading Language). Su trabajo es calcular el color final de *cada píxel* de la pantalla, creando un patrón radial complejo, similar a una especie de flor o mandala estilizado, con colores alternantes.
 
-Aquí está la explicación paso a paso de lo que hace cada sección:
+https://github.com/user-attachments/assets/e6773a17-36e3-46d1-8199-f17902d38c31
+
+
+
+
+Aquí está la explicación paso a paso de lo que hace cada sección de la pascua creada en GLSL con patron generativo:
 
 -----
 
@@ -269,4 +273,7 @@ gl_FragColor = vec4(mix(b, c, m), 1.);
           * El `1.` final establece la opacidad (alpha) en 1.0.
 
 **En resumen, el código dibuja una forma radial compleja de 12 puntas, con sectores alternantes de rojo y verde oscuro, un borde de contraste fino entre ellos, un núcleo amarillo brillante, y un degradado que oscurece el patrón hacia el centro.**
+<br>
+<br>
 
+!["Pascua"](ShaderPascua.png)
