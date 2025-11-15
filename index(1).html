@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Globo con rutas de aves</title>
+    <style>
+      /* **Ajuste CRÍTICO:** Asegura que body ocupe el 100% de la ventana */
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        overflow: hidden;
+        display: flex; /* Permite dividir la pantalla entre canvas y leyenda */
+        background-color: #000;
+        color: white; /* Por si el #legend falla, el texto del body es blanco */
+      }
+      #canvas-container {
+        flex: 1; /* Ocupa todo el espacio sobrante */
+      }
+      #legend {
+        width: 300px;
+        background: #1e1e1e;
+        color: #f0f0f0;
+        padding: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        overflow-y: auto;
+        border-left: 1px solid #333;
+        /* BORDE TEMPORAL: Sirve para ver si el div #legend está en pantalla */
+        border: 2px solid red;
+      }
+      #legend h2 {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #555;
+        padding-bottom: 10px;
+        color: #4caf50;
+      }
+
+      /* MODIFICADO PARA HORIZONTAL */
+      #birds-list {
+        display: flex;
+        flex-direction: row; /* CAMBIO CLAVE: Ahora es horizontal */
+        flex-wrap: wrap; /* Permite salto de línea si no caben */
+        gap: 10px;
+        justify-content: flex-start;
+      }
+      /* FIN MODIFICADO */
+
+      /* Estilos para que el color-box y el nombre se vean juntos */
+      .bird {
+        display: flex;
+        align-items: center;
+        /* Reducimos el padding vertical y agregamos margen horizontal */
+        padding: 4px 8px;
+        border-radius: 4px;
+        width: auto; /* Ocupa solo el espacio de su contenido */
+        margin-right: 15px; /* Espacio entre los elementos horizontales */
+      }
+      .color-box {
+        width: 18px;
+        height: 18px;
+        margin-right: 8px; /* Ajuste para un look más compacto */
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        flex-shrink: 0;
+      }
+      .bird-name {
+        font-weight: bold;
+        font-size: 14px;
+        color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="canvas-container"></div>
+    <script src="index.js"></script>
+  </body>
+</html>

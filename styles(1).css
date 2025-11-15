@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+}
+#map {
+  height: 180px;
+}
+#birds-list {
+  display: flex;
+  flex-direction: row; /* CAMBIO CLAVE: De 'column' a 'row' */
+  flex-wrap: wrap; /* Permite que los elementos salten de línea */
+  gap: 10px; /* Espacio entre filas y columnas */
+  justify-content: flex-start; /* Alinea los elementos a la izquierda */
+}
+/* ADICIONAL: Aseguramos que los elementos .bird no ocupen todo el ancho */
+.bird {
+  /* Resto de estilos... */
+  width: auto; /* Permite que el elemento ocupe solo el espacio necesario */
+  margin-right: 15px; /* Espacio extra entre elementos horizontales */
+}
