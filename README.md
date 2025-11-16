@@ -1,11 +1,14 @@
 # Shaders
-
+## Autora
+Andrea Santana López
+## Introducción
 En este proyecto se basa en desarrollar shaders para una prática anterior hecha donde,en mi caso,escogi la de visualización de datos donde hize un shader para resaltar el relieve y la luz y 
 en la segunda parte nos pedian realizar un fragment shader con patrón generativo lo cual escogi hacer una pascua navideña.
 
 La idea de hacer el primero fue la gran necesidad de hacer que el planeta en mi visualización de los datos de la migración de las aves se viera más atractivo;en cuanto a la pascua navideña
 me motivo la cercanía de la navidad.
 
+## Desarrollo
 Una vez explicado esto se comenzará a explicar los fragmentos relacionados con los shaders añadidos en la visualización de los datos de migración de aves.
 Primero se ha descargado un pack de texturas primero la del planeta,luego la textura del relieve y la textura especular.En segundo lugar se carga estas texturas
 en las siguientes variables ayudada de un cargadador de texturas también inicializado.
@@ -122,7 +125,7 @@ const shaderMaterial = new THREE.ShaderMaterial({
   lights: false,
 });
 ```
-
+## Demostración 
 https://github.com/user-attachments/assets/e6773a17-36e3-46d1-8199-f17902d38c31
 
 
@@ -275,5 +278,8 @@ gl_FragColor = vec4(mix(b, c, m), 1.);
 **En resumen, el código dibuja una forma radial compleja de 12 puntas, con sectores alternantes de rojo y verde oscuro, un borde de contraste fino entre ellos, un núcleo amarillo brillante, y un degradado que oscurece el patrón hacia el centro.**
 <br>
 <br>
-
+## Demostración 
 !["Pascua"](ShaderPascua.png)
+<br>
+## Contacto
+Para cualquier mejora o dificultad para entender al código contacteme por el correo andreasantaloz@gmail.com
